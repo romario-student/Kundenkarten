@@ -90,8 +90,13 @@ class PageList {
      * @param {Integer} index
      */
     _askDelete(index) {
+<<<<<<< HEAD
 
         let answer = confirm("Soll die ausgewählte Adresse wirklich gelöscht werden?");
+=======
+        // Sicherheitsfrage zeigen
+        let answer = confirm("Soll die ausgewählte Kundenkarte wirklich gelöscht werden?");
+>>>>>>> e396446b81e700b5bfc1df9dcf2580059a2790ea
         if (!answer) return;
 
 
