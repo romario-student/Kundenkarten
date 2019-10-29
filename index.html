@@ -72,14 +72,17 @@
 
         <template id="template-page-list-li">
             <li data-index="$INDEX$">
+                <div class="Firma">
+                    $FIRMA$
+                </div>
                 <div class="name">
                     $LAST_NAME$, $FIRST_NAME$
                 </div>
-                <div class="field phone">
-                    $PHONE$
+                <div class="field Kundennummer">
+                    $KUNDENNUMMER$
                 </div>
-                <div class="field email">
-                    $EMAIL$
+                <div class="field Homepage">
+                    $HOMEPAGE$
                 </div>
                 <div class="actions">
                     <div class="action edit">
@@ -99,10 +102,11 @@
         <template id="template-page-edit">
             <div>
                 <div class="form">
+                    <input class="Firma" placeholder="Firma" value="$FIRMA$" />
                     <input class="last_name" placeholder="Firma" value="$LAST_NAME$" />
                     <input class="first_name" placeholder="Name" value="$FIRST_NAME$" />
-                    <input class="Kundennummer" placeholder="Kundennummer" value="$PHONE$" />
-                    <input class="Homepage" placeholder="Homepage" value="$EMAIL$" />
+                    <input class="Kundennummer" placeholder="Kundennummer" value="$KUNDENNUMMER$" />
+                    <input class="Homepage" placeholder="Homepage" value="$HOMEPAGE$" />
                 </div>
                 <div class="actions">
                     <div class="action save">
