@@ -25,10 +25,11 @@ class App {
         // Sie hier die Datensätze komplett einlesen und wiederherstellen.
         this._data = [
             {
-                first_name: "Ikea",
-                last_name: "Willy Tanner",
-                phone: "+49 711 564412",
-                email: "willy.tanner@alf.com",
+                Firma: "Ikea",
+                first_name: "Willy",
+                last_name: "Tanner",
+                Kundennummer: "+49 711 564412",
+                Homepage: "willy.tanner@alf.com",
             },
         ];
 
