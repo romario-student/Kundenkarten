@@ -62,10 +62,11 @@ class PageList {
             dummy.innerHTML = template;
 
             dummy.innerHTML = dummy.innerHTML.replace("$INDEX$", index);
-            dummy.innerHTML = dummy.innerHTML.replace("$LAST_NAME$", dataset.last_name);
-            dummy.innerHTML = dummy.innerHTML.replace("$FIRST_NAME$", dataset.first_name);
-            dummy.innerHTML = dummy.innerHTML.replace("$PHONE$", dataset.phone);
-            dummy.innerHTML = dummy.innerHTML.replace("$EMAIL$", dataset.email);
+            dummy.innerHTML = dummy.innerHTML.replace("FIRMA", Firma);
+            dummy.innerHTML = dummy.innerHTML.replace("$First_NAME$", dataset.first_name);
+            dummy.innerHTML = dummy.innerHTML.replace("$Last_NAME$", dataset.last_name);
+            dummy.innerHTML = dummy.innerHTML.replace("$KUNDENNUMMER$", dataset.Kundennummer);
+            dummy.innerHTML = dummy.innerHTML.replace("$HOMEPAGE$", dataset.Homepage);
 
             /* Innere Funktion, damit den Event Listenern eine Kopie(!!) von
              * index übergeben wird. Andernfalls würde immer nur der letzte
