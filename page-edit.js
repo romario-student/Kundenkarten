@@ -108,8 +108,8 @@ class PageEdit {
         this._dataset.Firma = firma;
         this._dataset.first_name = firstName;
         this._dataset.last_name = lastName;
-        this._dataset.Kundennummer = kundennummer;
-        this._dataset.Homepage = homepage;
+        this._dataset.kundennummer = kundennummer;
+        this._dataset.homepage = homepage;
 
         if (this._editIndex > -1) {
             this._app.updateDataByIndex(this._editIndex, this._dataset);
