@@ -101,7 +101,7 @@ class PageList {
      */
     _askDelete(index) {
         // Sicherheitsfrage zeigen
-        let answer = confirm("Soll die ausgewählte Adresse wirklich gelöscht werden?");
+        let answer = confirm("Soll die ausgewählte Kundenkarte wirklich gelöscht werden?");
         if (!answer) return;
 
         // Datensatz löschen
