@@ -1,18 +1,4 @@
-/**
- * Stylesheet zur Klasse PaeeEdit: Adresse anlegen/ändern
- *
- * Hier wird das Aussehen der Seite mit dem Eingabeformular definiert. Da
- * sich die CSS-Regeln allerdings global auf die ganz Anwendung auswirken,
- * steht vor jeder Regel #main-page-edit, damit nur der Inhalt in diesem
- * Element gestyled wird.
- *
- * Die längste Zeit war dies die einzige Möglichkeit, CSS-Regeln auf einzelne
- * Teile einer Seite zu beschränken. Sobald sich die "Shadow DOM"-Spezifikation
- * stabilisiert, wird es hier in Zusammenhang mit JavaScript weitere, elegantere
- * Möglichkeiten geben.
- */
 
-/* FORMULARFELDER */
 #main-page-edit {
     background-color: white;
     padding: 1em;
@@ -29,7 +15,7 @@
     margin-bottom: 1em;
 }
 
-/* AKTIONSBUTTONS */
+
 #main-page-edit .actions {
     display: flex;
     justify-content: space-between;
