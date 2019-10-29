@@ -34,7 +34,7 @@ class PageEdit {
         if (this._editIndex > -1) {
             let dataset = this._app.getDataByIndex(this._editIndex);
 
-            this._dataset.Firma = dataset.Firma,;
+            this._dataset.Firma = dataset.Firma;
             this._dataset.first_name = dataset.first_name;
             this._dataset.last_name = dataset.last_name;
             this._dataset.K_Nr = dataset.K_Nr;
