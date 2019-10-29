@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>☎️ Adressbuch</title>
+        <title>Kundenkarten</title>
 
         <!-- Klasse App: Steuert die gesamte Anwendung -->
         <script src="app.js"></script>
@@ -29,13 +29,13 @@
                     {
                         name: "page-new",
                         klass: PageEdit,
-                        label: "Adesse hinzufügen",
+                        label: "Karte hinzufügen",
                         hidden: false,                  // Seite kann im Menü ausgewählt werden
                     },
                     {
                         name: "page-edit",
                         klass: PageEdit,
-                        label: "Adresse bearbeiten",
+                        label: "Karte bearbeiten",
                         hidden: true,                   // Seite kann im Menü NICHT ausgewählt werden
                     },
                 ];
@@ -75,10 +75,10 @@
                 <div class="name">
                     $LAST_NAME$, $FIRST_NAME$
                 </div>
-                <div class="field phone">
+                <div class="field K_Nr">
                     $PHONE$
                 </div>
-                <div class="field email">
+                <div class="field Homepage">
                     $EMAIL$
                 </div>
                 <div class="actions">
@@ -99,10 +99,11 @@
         <template id="template-page-edit">
             <div>
                 <div class="form">
+                    <input class="Firma" placeholder="Firma" value="$FIRMA$" />
                     <input class="first_name" placeholder="Vorname" value="$FIRST_NAME$" />
                     <input class="last_name" placeholder="Nachname" value="$LAST_NAME$" />
-                    <input class="phone" placeholder="Telefonnummer" value="$PHONE$" />
-                    <input class="email" placeholder="E-Mailadresse" value="$EMAIL$" />
+                    <input class="K-Nr" placeholder="Kundennummer" value="$K-NR$" />
+                    <input class="Homepage" placeholder="Homepage" value="$HOMEPAGE$" />
                 </div>
                 <div class="actions">
                     <div class="action save">
