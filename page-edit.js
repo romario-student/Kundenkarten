@@ -24,19 +24,21 @@ class PageEdit {
 
         // Bearbeiteten Datensetz einlesen
         this._dataset = {
+            firma: "",
             first_name: "",
             last_name: "",
-            phone: "",
-            email: "",
+            kundennummer: "",
+            homepage: "",
         };
 
         if (this._editIndex > -1) {
             let dataset = this._app.getDataByIndex(this._editIndex);
 
+            this._dataset.firma = dataset.firma
             this._dataset.first_name = dataset.first_name;
             this._dataset.last_name = dataset.last_name;
-            this._dataset.phone = dataset.phone;
-            this._dataset.email = dataset.email;
+            this._dataset.kundennummer = dataset.kundennummer;
+            this._dataset.homepage = dataset.homepage;
         }
     }
 
@@ -65,10 +67,11 @@ class PageEdit {
         // Formularfelder einfügen
         let template = document.getElementById("template-page-edit").innerHTML;
         this._mainElement.innerHTML = template;
+        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$FIRMA$", this._dataset.firma);
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$FIRST_NAME$", this._dataset.first_name);
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$LAST_NAME$", this._dataset.last_name);
-        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$PHONE$", this._dataset.phone);
-        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$EMAIL$", this._dataset.email);
+        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$KUNDENNUMMER$", this._dataset.kundennummer);
+        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$HOMEPAGE$", this._dataset.homepage);
 
         let saveButton = this._mainElement.querySelector(".action.save");
         saveButton.addEventListener("click", () => this._saveAndExit());
@@ -80,10 +83,16 @@ class PageEdit {
      */
     _saveAndExit() {
         // Eingegebene Werte überprüfen
+        let firma = document.querySelector("#main-page-edit .firma").value.trim();
         let firstName = document.querySelector("#main-page-edit .first_name").value.trim();
         let lastName = document.querySelector("#main-page-edit .last_name").value.trim();
-        let phone = document.querySelector("#main-page-edit .phone").value.trim();
-        let email = document.querySelector("#main-page-edit .email").value.trim();
+        let kundennummer = document.querySelector("#main-page-edit .kundennummer").value.trim();
+        let homepage = document.querySelector("#main-page-edit .homepage").value.trim();
+
+        if (firma === "") {
+            alert("Geben Sie erst eine Firma ein.");
+            return;
+        }
 
         if (firstName === "") {
             alert("Geben Sie erst einen Vornamen ein.");
@@ -96,10 +105,11 @@ class PageEdit {
         }
 
         // Datensatz speichern
+        this._dataset.Firma = firma;
         this._dataset.first_name = firstName;
         this._dataset.last_name = lastName;
-        this._dataset.phone = phone;
-        this._dataset.email = email;
+        this._dataset.Kundennummer = kundennummer;
+        this._dataset.Homepage = homepage;
 
         if (this._editIndex > -1) {
             this._app.updateDataByIndex(this._editIndex, this._dataset);

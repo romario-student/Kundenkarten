@@ -62,10 +62,11 @@ class PageList {
             dummy.innerHTML = template;
 
             dummy.innerHTML = dummy.innerHTML.replace("$INDEX$", index);
+            dummy.innerHTML = dummy.innerHTML.replace("$FIRMA$", dataset.firma);
             dummy.innerHTML = dummy.innerHTML.replace("$LAST_NAME$", dataset.last_name);
             dummy.innerHTML = dummy.innerHTML.replace("$FIRST_NAME$", dataset.first_name);
-            dummy.innerHTML = dummy.innerHTML.replace("$PHONE$", dataset.phone);
-            dummy.innerHTML = dummy.innerHTML.replace("$EMAIL$", dataset.email);
+            dummy.innerHTML = dummy.innerHTML.replace("$KUNDENNUMMER$", dataset.kundennummer);
+            dummy.innerHTML = dummy.innerHTML.replace("$HOMEPAGE$", dataset.homepage);
 
             /* Innere Funktion, damit den Event Listenern eine Kopie(!!) von
              * index übergeben wird. Andernfalls würde immer nur der letzte
@@ -101,7 +102,7 @@ class PageList {
      */
     _askDelete(index) {
         // Sicherheitsfrage zeigen
-        let answer = confirm("Soll die ausgewählte Adresse wirklich gelöscht werden?");
+        let answer = confirm("Soll die ausgewählte Kundenkarte wirklich gelöscht werden?");
         if (!answer) return;
 
         // Datensatz löschen
