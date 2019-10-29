@@ -1,14 +1,7 @@
-/**
- * Stylesheet zur Klasse App: Hauptstylesheet der Anwendung.
- *
- * Hier sollten nur allgemeine Sachen stehen, die das Layout als Ganzes
- * betreffen. Also solche Dinge wie Schriftart und Größe, Farben usw.
- * Spezifische Angaben zur Listenübersicht oder dem Eingabeformular gehören
- * in das jeweilige Stylesheet und nicht hierher.
- */
+
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
-/* ALLGEMEINES */
+
 html, body {
     padding: 0;
     margin: 0;
@@ -45,7 +38,7 @@ html {
     }
 }
 
-/* NAVIGATION */
+
 nav {
     background-color: #404040;
     color: white;

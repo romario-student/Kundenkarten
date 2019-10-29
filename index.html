@@ -4,39 +4,39 @@
         <meta charset="utf-8" />
         <title>☎️ Adressbuch</title>
 
-        <!-- Klasse App: Steuert die gesamte Anwendung -->
+
         <script src="app.js"></script>
         <link rel="stylesheet" href="app.css" />
 
-        <!-- Klasse PageList: Stellt die Listenansicht zur Verfügung -->
+
         <script src="page-list.js"></script>
         <link rel="stylesheet" href="page-list.css" />
 
-        <!-- Klasse PageEdit: Stellt das Eingabeformular zur Verfügung -->
+
         <script src="page-edit.js"></script>
         <link rel="stylesheet" href="page-edit.css" />
 
-        <!-- Anwendung starten -->
+
         <script>
             window.addEventListener("load", () => {
                 let pages = [
                     {
-                        name: "page-list",              // Name zum Aufrufen der Seite
-                        klass: PageList,                // Klasse, die die Seite bereitstellt
-                        label: "Übersicht",             // Bezeichnung der Seite
-                        hidden: false,                  // Seite kann im Menü ausgewählt werden
+                        name: "page-list",
+                        klass: PageList,
+                        label: "Übersicht",
+                        hidden: false,
                     },
                     {
                         name: "page-new",
                         klass: PageEdit,
                         label: "Adesse hinzufügen",
-                        hidden: false,                  // Seite kann im Menü ausgewählt werden
+                        hidden: false,
                     },
                     {
                         name: "page-edit",
                         klass: PageEdit,
                         label: "Adresse bearbeiten",
-                        hidden: true,                   // Seite kann im Menü NICHT ausgewählt werden
+                        hidden: true,
                     },
                 ];
 
@@ -46,7 +46,7 @@
         </script>
     </head>
     <html>
-        <!-- Kopfbereich mit Tabreitern -->
+
         <nav id="app-menu">
             <ul></ul>
         </nav>
@@ -57,7 +57,7 @@
             </li>
         </template>
 
-        <!-- Seite: Listenübersicht -->
+
         <main id="main-page-list" class="hidden">
             <ol></ol>
         </main>
@@ -92,7 +92,7 @@
             </li>
         </template>
 
-        <!-- Seite: Adresse anlegen/bearbeiten -->
+        
         <main id="main-page-edit" class="hidden">
         </main>
 
