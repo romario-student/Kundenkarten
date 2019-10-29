@@ -27,7 +27,7 @@ class PageEdit {
             Firma: "",
             first_name: "",
             last_name: "",
-            K_Nr: "",
+            Kundennummer: "",
             Homepage: "",
         };
 
@@ -37,7 +37,7 @@ class PageEdit {
             this._dataset.Firma = dataset.Firma;
             this._dataset.first_name = dataset.first_name;
             this._dataset.last_name = dataset.last_name;
-            this._dataset.K_Nr = dataset.K_Nr;
+            this._dataset.Kundennummer = dataset.Kundennummer;
             this._dataset.Homepage = dataset.Homepage;
         }
     }
@@ -70,7 +70,7 @@ class PageEdit {
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$FIRMA$", this._dataset.firma);
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$FIRST_NAME$", this._dataset.first_name);
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$LAST_NAME$", this._dataset.last_name);
-        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$K_NR$", this._dataset.K_Nr);
+        this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$KUNDENNUMMER$", this._dataset.Kundennummer);
         this._mainElement.innerHTML = this._mainElement.innerHTML.replace("$HOMEPAGE$", this._dataset.homepage);
 
         let saveButton = this._mainElement.querySelector(".action.save");
@@ -86,7 +86,7 @@ class PageEdit {
         let Firma = document.querySelector("#main-page-edit .Firma").value.trim();
         let firstName = document.querySelector("#main-page-edit .first_name").value.trim();
         let lastName = document.querySelector("#main-page-edit .last_name").value.trim();
-        let K_Nr = document.querySelector("#main-page-edit .K_Nr").value.trim();
+        let Kundennummer = document.querySelector("#main-page-edit .Kundennummer").value.trim();
         let Homepage = document.querySelector("#main-page-edit .Homepage").value.trim();
 
         if (Firma === "") {
@@ -104,7 +104,7 @@ class PageEdit {
             return;
         }
 
-        if (K_Nr === "") {
+        if (Kundennummer === "") {
             alert("Geben Sie erst eine Kundennummer ein.");
             return;
         }
@@ -113,7 +113,7 @@ class PageEdit {
         this._dataset.Firma = Firma;
         this._dataset.first_name = firstName;
         this._dataset.last_name = lastName;
-        this._dataset.K_Nr = K_Nr;
+        this._dataset.Kundennummer = Kundennummer;
         this._dataset.Homepage = Homepage;
 
         if (this._editIndex > -1) {
