@@ -26,10 +26,10 @@ class App {
         this._data = [
             {
                 firma: "Ikea",
-                first_name: "Willy",
-                last_name: "Tanner",
-                kundennummer: "+49 711 564412",
-                homepage: "willy.tanner@alf.com",
+                first_name: "Romario",
+                last_name: "Hagemann",
+                kundennummer: "12345678",
+                homepage: "www.ikea.de",
             },
         ];
 
