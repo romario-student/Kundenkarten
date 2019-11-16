@@ -16,3 +16,12 @@ Auf der Homepage befinden sich folgende Navigationselemente:
 
 - Kontakt/Anfragen: Öffnet ein Formular, in welchem Fragen an den Support gesendet werden können.
 
+
+Technische Details:
+
+Der Server wurde mittels node.js aufgesetzt. Installiert wurden dabei der BodyParser, sqlite3 und express. 
+Die Datenbank, die dahinter arbeitet ist eine sqlite3 Datenbank. Das Schema der Datenbank heißt project, dass wiederum in 3 verschiedene
+Tabellen aufgeteilt ist. Users, Request und Cards. 
+
+
+
