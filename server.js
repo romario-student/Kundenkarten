@@ -23,3 +23,29 @@ app.get('/project', function(request, response){
         }
     })
 });
+
+app.post('/project', function(request, response){
+    console.log('POST request received at /project');
+    db.run('INSERT INTO cards VALUES (?, ?, ?, ?)',
+    [request.body.company, request.body.customer, request.body.username, request.body.homepage, function(err){
+        if(err) {
+            console.log("Error: " + err);
+        }
+        else {
+            response.status(200).redirect('index.html');
+        }
+    }])
+});
+
+app.post('/request', function(request, response){
+    console.log('POST request received at /request');
+    db.run('INSERT INTO request VALUES (?, ?, ?)',
+    [request.body.mail, request.body.subject, request.body.message, function(err){
+        if(err) {
+            console.log("Error: " + err);
+        }
+        else {
+            response.status(200).redirect('index.html');
+        }
+    }])
+});
