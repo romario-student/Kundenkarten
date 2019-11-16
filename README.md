@@ -1,4 +1,4 @@
-Stocard
+#Stocard
 
 Gruppenprojekt: Online-Kundenkartenverwaltungsdienst.
 
