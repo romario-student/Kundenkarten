@@ -120,3 +120,59 @@ header nav ul li:hover {
 #home img:hover {
     opacity: 1;
 }
+/* Die App ***********************************/
+
+#about img {
+    width: 240px;
+}
+
+#about img:hover {
+    transform: : scale(1.1);
+    -webkittransform: : scale(1.1);
+    -moz-transform: : scale(1.1);
+    -o-transform: : scale(1.1);
+}
+
+#about h4 {
+    font-size: 25px;
+}
+
+#about p {
+    width: 700px;
+    margin: 0 auto 0 auto;
+}
+
+/* Partner ***********************************/
+
+#partner {
+    background-color: #f0f0f0;
+}
+
+#projects {
+    width: 900px;
+    margin: 0 auto 0 auto;
+}
+
+#projects ul {
+    padding: 0;
+}
+
+#projects ul li {
+    width: 33.3%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+#projects img {
+    width: 280px;
+    height: 170px;
+    border-radius: 5px;
+}
+
+#projects img:hover {
+    transform: : scale(1.1);
+    -webkittransform: : scale(1.1);
+    -moz-transform: : scale(1.1);
+    -o-transform: : scale(1.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
