@@ -1,6 +1,5 @@
 Stocard
 
-
 Gruppenprojekt: Online-Kundenkartenverwaltungsdienst.
 
 Gruppenteilnehmer: Aylin Günes, Lars Berning, Romario Hagemann
