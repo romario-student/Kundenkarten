@@ -80,3 +80,59 @@ function xhrReadyStateHandler() {
                 <input class="button" type="submit" value="Anlegen">
 
             </form>
+            <form action="/update" method="POST">
+                <input class="input_text" type="text" tabindex="5" name="company" placeholder="Firma"><br>
+                <input class="input_text" type="text" tabindex="6" name="username" placeholder="Username"><br>
+                <input class="Button" type="submit" value="User Bearbeiten" />
+            </form>
+            <form action="/delete" method="POST">
+                <input class="input_text" type="text" name="company" placeholder="Firma" /><br>
+                <input class="Button" type="submit" value="Löschen"/>
+            </form>
+            </aside>
+            <section id="list">
+
+            </section>
+
+        </section>
+
+        <!--WORK---------------------------------->
+
+        <section id="partner">
+            <h3>Partner</h3>
+            <hr>
+
+            <div id="projects">
+                <ul>
+                    <li><a href="#"><img src="img/partner1.jpg" alt="Projekt_01"></a></li>
+                    <li><a href="#"><img src="img/partner2.jpg" alt="Projekt_02"></a></li>
+                    <li><a href="#"><img src="img/partner3.jpg" alt="Projekt_03"></a></li>
+                    <li><a href="#"><img src="img/partner4.jpg" alt="Projekt_04"></a></li>
+                    <li><a href="#"><img src="img/partner5.jpg" alt="Projekt_05"></a></li>
+                    <li><a href="#"><img src="img/partner6.jpg" alt="Projekt_06"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--CONTACT---------------------------------->
+
+        <section id="contact">
+            <h3>Kontakt/Anfragen</h3>
+            <hr>
+            <form action="/request" method="POST">
+                <input class="input_text" type="email" tabindex="7" name="mail"placeholder="E-Mail"><br>
+                <input class="input_text" type="text" tabindex="8" name="subject" placeholder="Betreff"><br>
+                <textarea class="input_text" type="nachricht" tabindex="9" name="message"placeholder="Nachricht"></textarea><br>
+                <input class="button" type="submit">
+            </form>
+        </section>
+
+        <!--FOOTER---------------------------------->
+
+        <footer>
+            <p>
+                &copy; 2019 Stocard
+            </p>
+        </footer>
+    </body>
+</html>
