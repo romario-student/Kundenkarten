@@ -49,3 +49,28 @@ app.post('/request', function(request, response){
         }
     }])
 });
+app.post('/delete', function(request, response){
+    console.log('POST request received at /delete');
+    db.run('DELETE FROM cards WHERE company = ?',
+    [request.body.company,  function(err){
+        if(err) {
+            console.log("Error: " + err);
+        }
+        else {
+            response.status(200).redirect('index.html');
+        }
+    }])
+});
+
+app.post('/update', function(request, response){
+    console.log('POST request received at /update');
+    db.run('UPDATE cards SET username = ?  WHERE company = ?',
+    [request.body.username, request.body.company, function(err){
+        if(err) {
+            console.log("Error: " + err);
+        }
+        else {
+            response.status(200).redirect('index.html');
+        }
+    }])
+});
